@@ -36,7 +36,7 @@
 | 🏛 Government Oracle Signing | Official personnel verify and sign user data manually                      |
 | ✅ On-chain Verification     | Status `Verified_KTP` stored securely and read-only accessible              |
 | 🔁 Cross-app Portability     | Apps can check `Verified` status without needing to store user data         |
-| 💸 Financial Access Layer   | Enables bansos apps, cooperatives, and P2P fintech to validate eligibility  |
+| 💸 Financial Access Layer   | Enables Cash Social assistance apps, cooperatives, and P2P fintech to validate eligibility  |
 | 👛 Wallet Integration        | Plug wallet + token support for balance, aid, and micro-credit              |
 
 ---
@@ -79,3 +79,59 @@
    - Additional loan records stored in future `LoanLedger` smart contract
 
 ---
+## 📦 Installation & Development
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/yourname/idchain.git
+cd idchain
+```
+
+### 2. Setup Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+This will start the React development server. Open your browser at `http://localhost:3000` to view the app.
+
+### 3. Setup Motoko Dependencies
+```bash
+cd backend
+mops add https://github.com/canscale/StableHeapBTreeMap
+mops install
+```
+> **Note:** The `mops` tool is used to manage Motoko packages. If you don’t have it installed, you can get it from [MOPS GitHub](https://github.com/dfinity/motoko-packages).
+
+### 4. Start ICP Local Replica and Deploy Canisters
+```bash
+dfx start --background
+dfx deploy
+```
+This will start a local Internet Computer replica and deploy all canisters.
+
+### 5. Running the Full Application
+- Make sure both backend canisters and frontend are running.
+- Connect your wallet (Plug Wallet or Internet Identity).
+- Register identity, and proceed with the verification flow.
+
+---
+
+## 👥 Team
+
+| Member | Role                                |
+|--------|-------------------------------------|
+| Alfian | Team Lead / Integration Engineer    |
+| Hanif  | Identity & Backend Architect        |
+| Razi   | Field Research / Use Case Modeling  |
+| Haris  | UI/UX Designer & Frontend Developer |
+
+---
+
+## 📄 License
+
+MIT License – Free for use in social, research, and hackathon projects.
+
+---
+
+Please submit pull requests or open issues for discussion at [GitHub Issues](https://github.com/alfianramadani/idchain/issues).
